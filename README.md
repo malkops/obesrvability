@@ -122,7 +122,7 @@ CREATE USER 'exporter'@'localhost' IDENTIFIED BY 'password' WITH MAX_USER_CONNEC
 GRANT PROCESS, REPLICATION CLIENT, SELECT ON \*.\* TO 'exporter'@'localhost';
 ```
 
-Configs for blackbox and mysql [there](tmp). Then create a services for each exporter and run them
+Configs for blackbox and mysql [there](GAP-1/). Then create a services for each exporter and run them
 
 На этой же или дополнительной виртуальной машине установите Prometheus задачей которого будет раз в 5 секунд собирать метрики с экспортеров
 
@@ -135,11 +135,11 @@ cd prometheus-2.40.2.linux-amd64/
 cp prometheus /usr/local/bin/
 sudo cp prometheus /usr/local/bin/
 ```
-Then I use this [config](tmp/prometheus.yml) and create service for running in basckground
+Then I use this [config](GAP-1/prometheus.yml) and create service for running in basckground
 
 На этой же или дополнительной виртуальной машине установите Alertmanager и сконфигурируйте его таким образом чтобы в случае недоступности какого либо компонента был отправлен alert с важность Critical в один из канал оповещений (канал оповещений на выбор: slack or telegram)
 
-Install Alertmanager and [configure](tmp/alertmanager.yml) them:
+Install Alertmanager and [configure](GAP-1/alertmanager.yml) them:
 ```bash
 wget https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-amd64.tar.gz
 tar zxf alertmanager-0.24.0.linux-amd64.tar.gz
