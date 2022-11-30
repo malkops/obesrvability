@@ -97,7 +97,7 @@ sudo systemctl restart php7.4-fpm
 
 На этой же виртуальной машине установите Prometheus exporters для сбора метрик со всех компонентов системы (начиная с VM и заканчивая DB, не забудьте про blackbox exporter который будет проверять доступность вашей CMS)
 
-Next I download three exporters blackbox, node and mysql:
+Next, I download three exporters blackbox, node and mysql:
 ```bash
 # create user for running services
 sudo useradd -m exporters
@@ -149,3 +149,14 @@ sudo cp alertmanager /usr/local/bin/
 sudo chown alertmanager: /usr/local/bin/alertmanage
 ```
 Then creating service for background job
+
+---
+
+In the second task I need to implement Grafana monitoring.
+
+For this task I use Docker to run Grafana:
+```bash
+docker run -d -p 3000:3000 --name grafana grafana/grafana-oss
+```
+
+Next, I go to Grafana Labs to get dashboards for my exporters. All screenshots [there](GAP-2/)
