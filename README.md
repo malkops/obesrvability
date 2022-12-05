@@ -135,7 +135,7 @@ cd prometheus-2.40.2.linux-amd64/
 cp prometheus /usr/local/bin/
 sudo cp prometheus /usr/local/bin/
 ```
-Then I use this [config](GAP-1/prometheus.yml) and create service for running in basckground
+Then I use this [config](GAP-1/prometheus.yml) and create service for running in background
 
 На этой же или дополнительной виртуальной машине установите Alertmanager и сконфигурируйте его таким образом чтобы в случае недоступности какого либо компонента был отправлен alert с важность Critical в один из канал оповещений (канал оповещений на выбор: slack or telegram)
 
