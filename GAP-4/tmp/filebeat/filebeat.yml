@@ -12,8 +12,6 @@ filebeat.config.modules:
 # ======================= Elasticsearch template setting =======================
 setup.template.settings:
   index.number_of_shards: 1
-setup.kibana:
-  host: "http://158.160.50.16:5601"
 # ================================== Outputs ===================================
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
