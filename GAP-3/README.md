@@ -2,7 +2,7 @@ Check index from GUI opensearch dashboards:
 
 ![image](https://user-images.githubusercontent.com/44001733/208620548-4ecfaf93-0b78-4529-b525-343e6953367e.png)
 
-All usaged configs [located there](GAP-3/tmp/)
+All usaged configs [located there](./tmp/)
 
 For getting `sshd` logs, add line `SyslogFacility local3` to `/etc/ssh/sshd_config` 
 
