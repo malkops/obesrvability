@@ -3,7 +3,10 @@ global:
   scrape_timeout: 10s
   
 rule_files:
-  - alert.yml
+  - blackbox-exporter.yml
+  - mysqld-exporter.yml
+  - node-exporter.yml
+  - nginx-exporter.yml
 
 scrape_configs:
   - job_name: node_exporter
