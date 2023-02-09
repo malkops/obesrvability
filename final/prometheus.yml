@@ -1,12 +1,17 @@
 global:
   scrape_interval: 30s
   scrape_timeout: 10s
-  
+
+alerting:
+  alertmanagers:
+  - follow_redirects: true
+    timeout: 10s
+    static_configs:
+    - targets:
+      - 192.168.0.54:9093
+
 rule_files:
-  - blackbox-exporter.yml
-  - mysqld-exporter.yml
-  - node-exporter.yml
-  - nginx-exporter.yml
+  - ./rules/*
 
 scrape_configs:
   - job_name: node_exporter
