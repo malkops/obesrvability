@@ -1,0 +1,20 @@
+heartbeat.monitors:
+- type: http
+  schedule: '@every 30s'
+  urls:
+    - https://192.168.0.200
+  ssl:
+    certificate_authorities: ['/usr/share/heartbeat/config/certs/wp.crt']
+
+
+setup.kibana:
+    host: "https://192.168.0.54:5601" 
+    username: 'elastic'
+    password: 'Z6ar5TqdB+oZM+Nfz0RO'
+
+output.elasticsearch:
+  hosts: ["https://192.168.0.54:9200"]
+  username: 'elastic'
+  password: 'Z6ar5TqdB+oZM+Nfz0RO'
+  serviceAccountToken: AAEAAWVsYXN0aWMva2liYW5hL2Vucm9sbC1wcm9jZXNzLXRva2VuLTE2NzU5MzYyOTI0MjE6NDBRZTBQLWpTZHV1S3BDalQyVDF0QQ
+  ssl.certificate_authorities: /usr/share/heartbeat/config/certs/http_ca.crt

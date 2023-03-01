@@ -1,0 +1,8 @@
+- type: http
+  id: wp-http
+  name: WORDPRESS HTTP Monitor
+  schedule: '@every 30s' # every 5 seconds from start of beat
+  hosts: ["https://192.168.0.200"]
+  ipv4: true
+  ipv6: true
+  mode: any
